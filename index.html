@@ -11,8 +11,16 @@
     <h3>
         Hello from index
     </h3>
-    
-    <div id="app"></div>
+    <div id="app">
+        <button @click="count++">Count: {{ count }}</button><br>
+        <span>Message: {{ msg }}</span>
+        <p>Using text interpolation: {{ rawHtml }}</p>
+        <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+        <div v-bind="objectOfAttrs">{{objectOfAttrs.id }}</div>
+        <p v-if="seen">Now you see me</p>
+        <a v-bind:href="url"> Google </a> <br>
+        <a id="changeColor" @click="doSomething">{{buttonText}}</a>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
