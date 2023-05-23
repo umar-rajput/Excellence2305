@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs Start</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <h3>
+        Hello from index
+    </h3>
+    <div id="app">
+        <button @click="count++">Count: {{ count }}</button><br>
+        <span>Message: {{ msg }}</span>
+        <p>Using text interpolation: {{ rawHtml }}</p>
+        <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+        <div v-bind="objectOfAttrs">{{objectOfAttrs.id }}</div>
+        <p v-if="seen">Now you see me</p>
+        <a v-bind:href="url"> Google </a> <br>
+        <a id="changeColor" @click="doSomething">{{buttonText}}</a>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
